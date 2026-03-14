@@ -4,7 +4,7 @@
 
 🚀 Gemini AI for Terminal CLI
 
-A high-performance Command Line Interface (CLI) to interact with Google's latest Gemini models (2.0+) directly from your Linux terminal. 
+A high-performance Command Line Interface (CLI) to interact with Google's latest Gemini models (2.0+) directly from your Linux terminal.
 
 ## 🌟 Features
 
@@ -17,9 +17,14 @@ A high-performance Command Line Interface (CLI) to interact with Google's latest
 
 - **Python 3.10+**
 - **Google AI API Key**: Get it at [Google AI Studio](https://ai.google.dev/).
-- **Linux Environment**: Bash or Zsh (tested on Tilix/Alacrity).
+- **Linux Environment**: Bash or Zsh (tested on Tilix/Alacritty).
 
 ## ⚙️ Installation & Setup
+
+```shell
+git clone https://github.com/alexolinux/gemini-cli.git
+cd gemini-cli
+```
 
 Setup virtual environment
 
@@ -38,26 +43,11 @@ pip install -q -U google-generativeai
 
 ## Shell Configuration
 
-Add your API key and aliases to your `~/.bashrc` or `~/.zshrc`:
-
 ```shell
 export GOOGLE_API_KEY="[GOOGLE_API_KEY_HERE]"
 ```
 
-### Tips
-
-You might add this project in path folder or yout preference.
-
-Example:
-
-```shell
-# gemini-cli Alias Example
-alias gem="${HOME}/.loca/gemini-cli/venv/bin/python ${HOME}/.loca/gemini-cli/gemini-cli.py"
-
-alias gemini="${HOME}/.loca/gemini-cli/venv/bin/python ${HOME}/.loca/gemini-cli/gemini-cli.py --interactive"
-```
-
-*Apply changes with `source ~/.bashrc` or `source ~/.zshrc`.*
+Add your `GOOGLE_API_KEY` to your $SHELL (`~/.bashrc` or `~/.zshrc`, etc) for persistence.
 
 ## Usage
 
@@ -66,6 +56,7 @@ alias gemini="${HOME}/.loca/gemini-cli/venv/bin/python ${HOME}/.loca/gemini-cli/
 - Interactive Chat: `gemini`
 
 ## 🧠 System Instruction (Persona)
+
 The CLI is programmed to behave as a Senior Linux Expert. You can modify this behavior by editing the SYSTEM_INSTRUCTION variable in gemini-cli.py.
 
 ## 📝 License
@@ -75,4 +66,3 @@ MIT License
 ## Author
 
 https://alexolinux.com
-
