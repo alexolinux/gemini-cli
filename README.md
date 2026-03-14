@@ -8,8 +8,8 @@ A high-performance Command Line Interface (CLI) to interact with Google's latest
 
 ## 🌟 Features
 
-- **Modern Architecture**: Optimized for `gemini-2.0-flash`.
-- **System Instructions**: Pre-configured as a Senior Linux Admin and Software Developer.
+- **Modern Architecture**: Optimized for `gemini-2.5-flash`.
+- **System Instructions**: Pre-configured as a Linux System Administrator, DevOps Engineer and Expert Software Developer.
 - **Zero Latency**: Lightweight execution using a dedicated Python virtual environment.
 - **Interactive Mode**: Full conversational support in the terminal.
 
@@ -38,26 +38,31 @@ Install dependencies
 
 ```shell
 # Install dependencies
-pip install -q -U google-generativeai
+pip install -q -U google-genai
 ```
 
 ## Shell Configuration
 
 ```shell
+# Add your GOOGLE_API_KEY to your $SHELL (`~/.bashrc` or `~/.zshrc`, etc) for persistence.
 export GOOGLE_API_KEY="[GOOGLE_API_KEY_HERE]"
 ```
 
-Add your `GOOGLE_API_KEY` to your $SHELL (`~/.bashrc` or `~/.zshrc`, etc) for persistence.
+```shell
+# Create an alias for easy access
+#(replace '${HOME}/.local/' with your actual clone directory)
+alias gemini="${HOME}/.local/gemini-cli/.venv/bin/python /home/alexmbarbosa/.local/gemini-cli/gemini-cli.py"
+```
 
 ## Usage
 
-- Quick Question: `gem "How to check open ports on Linux?"`
+- Quick Question: `gemini "How to check open ports on Linux?"`
 
-- Interactive Chat: `gemini`
+- Interactive Chat: `gemini --interactive`
 
 ## 🧠 System Instruction (Persona)
 
-The CLI is programmed to behave as a Senior Linux Expert. You can modify this behavior by editing the SYSTEM_INSTRUCTION variable in gemini-cli.py.
+The CLI is programmed to behave as a Linux SysAdmin and DevOps Engineer. You can modify this behavior by editing the SYSTEM_INSTRUCTION variable in gemini-cli.py.
 
 ## 📝 License
 
