@@ -21,16 +21,6 @@ A high-performance Command Line Interface (CLI) to interact with Google's latest
 
 ## ⚙️ Installation & Setup
 
-## Project Structure
-
-Choose your project directory
-
-```shell
-# Create project directory
-mkdir -p ~/workspace/local/gemini-cli
-cd $HOME/workspace/local/gemini-cli
-```
-
 Setup virtual environment
 
 ```shell
@@ -54,11 +44,17 @@ Add your API key and aliases to your `~/.bashrc` or `~/.zshrc`:
 export GOOGLE_API_KEY="[GOOGLE_API_KEY_HERE]"
 ```
 
+### Tips
+
+You might add this project in path folder or yout preference.
+
+Example:
+
 ```shell
 # gemini-cli Alias Example
-alias gem='$HOME/workspace/local/gemini-cli/venv/bin/python $HOME/workspace/local/gemini-cli/gemini-cli.py'
+alias gem="${HOME}/.loca/gemini-cli/venv/bin/python ${HOME}/.loca/gemini-cli/gemini-cli.py"
 
-alias gemini='$HOME/workspace/local/gemini-cli/venv/bin/python $HOME/workspace/local/gemini-cli/gemini-cli.py --interactive'
+alias gemini="${HOME}/.loca/gemini-cli/venv/bin/python ${HOME}/.loca/gemini-cli/gemini-cli.py --interactive"
 ```
 
 *Apply changes with `source ~/.bashrc` or `source ~/.zshrc`.*
