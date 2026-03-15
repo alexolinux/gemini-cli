@@ -60,11 +60,11 @@ def start_interactive_session():
 def main():
     if len(sys.argv) < 2:
         print("Usage:")
-        print("  gem 'your question'       - Single prompt")
-        print("  gem --interactive         - Start a chat session")
+        print("  gemini 'your question'       - Single prompt")
+        print("  gemini --interactive, -i     - Start a chat session")
         sys.exit(1)
 
-    if sys.argv[1] == "--interactive":
+    if sys.argv[1] in ["--interactive", "-i"]:
         start_interactive_session()
     else:
         prompt = " ".join(sys.argv[1:])
