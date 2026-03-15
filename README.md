@@ -37,8 +37,8 @@ source .venv/bin/activate
 Install dependencies
 
 ```shell
-# Install dependencies
-pip install -q -U google-genai
+# Install dependencies from requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Shell Configuration
