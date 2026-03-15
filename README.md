@@ -60,6 +60,37 @@ alias gemini="${HOME}/.local/gemini-cli/.venv/bin/python /home/alexmbarbosa/.loc
 
 - Interactive Chat: `gemini --interactive` (or `gemini -i`)
 
+### Extra Shell Configuration
+
+Instead of creating an aliases, you might create a shell function to use this script as a command.
+
+```shell
+# Add to your ~/.bashrc or ~/.zshrc
+_gemini_setup() {
+    local default_pkg="$HOME/pkg"
+    PKG="${PKG:-$default_pkg}"
+    GEMINI_PYTHON="$PKG/gemini-cli/.venv/bin/python"
+    GEMINI_SCRIPT="$PKG/gemini-cli/gemini-cli.py"
+}
+
+gemini() {
+    _gemini_setup
+
+    if [ ! -f "$GEMINI_PYTHON" ]; then
+        echo "Error: Python interpreter not found. Check PKG environment variable." >&2
+        return 1
+    fi
+
+    if [ "$1" = "-i" ]; then
+        "$GEMINI_PYTHON" "$GEMINI_SCRIPT" -i "${@:2}"
+    else
+        "$GEMINI_PYTHON" "$GEMINI_SCRIPT" "$@"
+    fi
+}
+```
+
+Then, you can call this script running `gemini` or `gemini --interactive | -i`.
+
 ## 🧠 System Instruction (Persona)
 
 The CLI is programmed to behave as a Linux SysAdmin and DevOps Engineer. You can modify this behavior by editing the SYSTEM_INSTRUCTION variable in gemini-cli.py.
