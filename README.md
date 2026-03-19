@@ -56,7 +56,7 @@ alias gemini="${HOME}/.local/gemini-cli/.venv/bin/python /home/alexmbarbosa/.loc
 
 ## Usage
 
-- Quick Question: `gemini "How to check open ports on Linux?"`
+- Quick Question: `gemini "How to check opened ports on Linux?"`
 
 - Interactive Chat: `gemini --interactive` (or `gemini -i`)
 
