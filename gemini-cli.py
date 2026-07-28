@@ -10,7 +10,7 @@ if not api_key:
     sys.exit(1)
 
 client = genai.Client(api_key=api_key)
-MODEL_NAME = 'gemini-2.5-flash'
+MODEL_NAME = 'gemini-3.6-flash'
 
 # System Instruction: Define the AI's behavior and personality
 SYSTEM_INSTRUCTION = (
