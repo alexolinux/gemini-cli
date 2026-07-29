@@ -8,7 +8,7 @@ A high-performance Command Line Interface (CLI) to interact with Google's latest
 
 ## 🌟 Features
 
-- **Modern Architecture**: Optimized for `gemini-2.5-flash`.
+- **Modern Architecture**: Change the LLM Model in variable `MODEL_NAME` (Current: **gemini-3.6-flash**).
 - **System Instructions**: Pre-configured as a Linux System Administrator, DevOps Engineer and Expert Software Developer.
 - **Zero Latency**: Lightweight execution using a dedicated Python virtual environment.
 - **Interactive Mode**: Full conversational support in the terminal.
